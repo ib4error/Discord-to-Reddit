@@ -1,4 +1,4 @@
-# Discord-to-Reddit
+# Discord-to-Reddit 
 There are many scripts and automated services that post Reddit Messages to Discord, but none the other way around. This bot is good for updates people are waiting on to both communities, where to origin of the update is in a Discord channel.
 <br><br>
 # Update your Reddit API values and other values and Discord values:
@@ -26,3 +26,5 @@ if message.channel.id == DISCORD CHANNELID HERE:
 
 ### discord bot token
 bot.run('DISCORD BOT TOKEN HERE')
+
+:shipit: :shipit: :shipit: :shipit: :shipit:

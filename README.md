@@ -25,7 +25,7 @@ async def on_ready():
 
     #other code in the function
 
-    post_to_reddit('[Automated] NEw Subreddit post TITLE here!!', f'{username}: {last_message.content}')
+    post_to_reddit('[Automated] New Subreddit post TITLE here!!', f'{username}: {last_message.content}')
 
 and
 @bot.event

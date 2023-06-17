@@ -31,8 +31,6 @@ def post_to_reddit(title, selftext):
     
     subreddit.submit(title, selftext=cleaned_selftext)
 
-#this event gets the last message in a discord channel 
-###and posts it to reddit when the script first loads
 @bot.event
 async def on_ready():
     await asyncio.sleep(5)  # Increase the delay to 5 seconds (or adjust as needed)
@@ -45,12 +43,10 @@ async def on_ready():
 
     if last_message is not None:
         username = str(last_message.author)  # Get the username as a string
-        post_to_reddit('[Automated] NEw Subreddit post TITLE here!!', f'{username}: {last_message.content}')
+        post_to_reddit('[Automated] New Subreddit post TITLE here!!', f'{username}: {last_message.content}')
     else:
         print('No messages found in the channel.')
 
-#this bot event posts messages from the discord channel 
-###to the subreddit that occur while script is running
 @bot.event
 async def on_message(message):
     if message.author == bot.user:
@@ -62,4 +58,4 @@ async def on_message(message):
 
     await bot.process_commands(message)
 
-bot.run('DISCORD BOT TOKEN HERE')
+bot.run('Discord BOT TOKEN HERE')

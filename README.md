@@ -4,7 +4,7 @@ There are many scripts and automated services that post Reddit Messages to Disco
 # Update your Reddit API values and other values and Discord values:
 ## Initialize Reddit client
 
-```
+```python
 reddit = Reddit(
     client_id='client id',
     client_secret='client secret',
@@ -14,12 +14,12 @@ reddit = Reddit(
 )
 ```
 ## reddit name
-```
+```python
 def post_to_reddit(title, selftext):
     subreddit = reddit.subreddit('reddit name')
 ```
 ## reddit post title (both bot events)
-```
+```python
 @bot.event
 async def on_ready():
 
@@ -36,7 +36,7 @@ async def on_message(message):
 post_to_reddit('[Automated] New Subreddit post TITLE here!!', f'{username}: {message.content}')
 ```
 ## channel ids
-```
+```python
 channel = bot.get_channel(DISCORD CHANNELID HERE)  # Replace with your channel ID
 
 and
@@ -44,7 +44,7 @@ and
 if message.channel.id == DISCORD CHANNELID HERE:  # Replace with your channel ID
 ```
 ## discord bot token
-```
+```python
 bot.run('DISCORD BOT TOKEN HERE')
 ```
 :shipit: :shipit: :shipit: :shipit: :shipit:

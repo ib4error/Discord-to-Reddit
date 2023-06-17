@@ -3,7 +3,7 @@ There are many scripts and automated services that post Reddit Messages to Disco
 <br><br>
 Update your Reddit API values and other values and Discord values:
 <br><br>
-# Initialize Reddit client#
+Initialize Reddit client
 reddit = Reddit(
     client_id='client id',
     client_secret='client secret',

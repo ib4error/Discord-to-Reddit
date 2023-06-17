@@ -3,6 +3,8 @@ There are many scripts and automated services that post Reddit Messages to Disco
 <br><br>
 # Update your Reddit API values and other values and Discord values:
 ## Initialize Reddit client
+
+```
 reddit = Reddit(
     client_id='client id',
     client_secret='client secret',
@@ -10,21 +12,39 @@ reddit = Reddit(
     username='reddit username',
     password='reddit password'
 )
-<br>
-### reddit name
-subreddit = reddit.subreddit('reddit name')
-<br>
+```
+## reddit name
+```
+def post_to_reddit(title, selftext):
+    subreddit = reddit.subreddit('reddit name')
+```
+## reddit post title (both bot events)
+```
+@bot.event
+async def on_ready():
 
-### reddit post title (both bot events)
-post_to_reddit('[Automated] New Subreddit post TITLE here!!',
-<br>
+    #other code in the function
 
-### channel ids
-channel = bot.get_channel(DISCORD CHANNELID HERE)<br>
-if message.channel.id == DISCORD CHANNELID HERE:
-<br>
+    post_to_reddit('[Automated] NEw Subreddit post TITLE here!!', f'{username}: {last_message.content}')
 
-### discord bot token
+and
+@bot.event
+async def on_message(message):
+
+    #other code in the function
+
+post_to_reddit('[Automated] New Subreddit post TITLE here!!', f'{username}: {message.content}')
+```
+## channel ids
+```
+channel = bot.get_channel(DISCORD CHANNELID HERE)  # Replace with your channel ID
+
+and
+
+if message.channel.id == DISCORD CHANNELID HERE:  # Replace with your channel ID
+```
+## discord bot token
+```
 bot.run('DISCORD BOT TOKEN HERE')
-
+```
 :shipit: :shipit: :shipit: :shipit: :shipit:

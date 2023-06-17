@@ -10,24 +10,24 @@ reddit = Reddit(
     username='reddit username',
     password='reddit password'
 )
-<br><br> 
----------------
+<br>
+
 <br><br>
 reddit name
 subreddit = reddit.subreddit('reddit name')
 <br><br>
----------------
+
 <br><br>
 reddit post title (both bot events)
 post_to_reddit('[Automated] New Subreddit post TITLE here!!',
 <br><br>
-----------------
+
 <br><br>
 channel ids
 channel = bot.get_channel(DISCORD CHANNELID HERE)
 if message.channel.id == DISCORD CHANNELID HERE:
 <br><br>
-----------------
+
 <br><br>
 discord bot token
 bot.run('DISCORD BOT TOKEN HERE')

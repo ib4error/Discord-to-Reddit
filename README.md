@@ -10,7 +10,7 @@ reddit = Reddit(
     username='reddit username',
     password='reddit password'
 )
-<br><br>
+<br><br> 
 ---------------
 <br><br>
 #reddit name#
